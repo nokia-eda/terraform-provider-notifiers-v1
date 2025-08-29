@@ -1,0 +1,207 @@
+app_group:
+  - read:
+      path: /apps/notifiers.eda.nokia.com
+      method: GET
+
+patch:
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: PATCH
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: PATCH
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: PATCH
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: PATCH
+
+resource_history:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_revs
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_revs
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_revs
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_revs
+      method: GET
+
+resource_list:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1
+      method: GET
+
+resource_topology:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_topology
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_topology
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_topology
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_topology
+      method: GET
+
+status:
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: DELETE
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: DELETE
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: DELETE
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: DELETE
+
+ui_result:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/_ui/{pathname}
+      method: GET
+
+com.nokia.eda.notifiers.v1.cluster_notifier:
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+      method: POST
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: GET
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: PUT
+
+com.nokia.eda.notifiers.v1.cluster_notifier_list:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+      method: GET
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+      method: DELETE
+
+com.nokia.eda.notifiers.v1.cluster_notifier_deleted_resources:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/_deleted
+      method: GET
+
+com.nokia.eda.notifiers.v1.cluster_provider:
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+      method: POST
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: GET
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: PUT
+
+com.nokia.eda.notifiers.v1.cluster_provider_list:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+      method: GET
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+      method: DELETE
+
+com.nokia.eda.notifiers.v1.cluster_provider_deleted_resources:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/_deleted
+      method: GET
+
+com.nokia.eda.notifiers.v1.notifier:
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+      method: POST
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: GET
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: PUT
+
+com.nokia.eda.notifiers.v1.notifier_list:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+      method: GET
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+      method: DELETE
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/notifiers
+      method: GET
+
+com.nokia.eda.notifiers.v1.notifier_deleted_resources:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/_deleted
+      method: GET
+
+com.nokia.eda.notifiers.v1.provider:
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+      method: POST
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: GET
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: PUT
+
+com.nokia.eda.notifiers.v1.provider_list:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+      method: GET
+  - delete:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+      method: DELETE
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/providers
+      method: GET
+
+com.nokia.eda.notifiers.v1.provider_deleted_resources:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/_deleted
+      method: GET
+
+totalPaths: 25
+totalSchemas: 48
+usedSchemas: 19
+unusedSchemas: 29
+unusedSchemaList:
+  - AppGroupVersion
+  - ErrorIndex
+  - ErrorItem
+  - ErrorResponse
+  - K8SPatchOp
+  - OverlayState
+  - Resource
+  - ResourceHistoryEntry
+  - StatusDetails
+  - TopoAttrMetadata
+  - TopoElemMetadata
+  - TopoLinkEndpoint
+  - TopoNodeGrouping
+  - TopoOverlayEndpoint
+  - TopoOverlayEndpointState
+  - TopoOverlayLink
+  - TopoOverlayLinkState
+  - TopoOverlayNode
+  - TopoOverlayNodeState
+  - TopoSchema
+  - Topology
+  - com.nokia.eda.notifiers.v1.ClusterNotifier_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.ClusterNotifier_metadata
+  - com.nokia.eda.notifiers.v1.ClusterProvider_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.ClusterProvider_metadata
+  - com.nokia.eda.notifiers.v1.Notifier_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.Notifier_metadata
+  - com.nokia.eda.notifiers.v1.Provider_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.Provider_metadata

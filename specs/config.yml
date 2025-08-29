@@ -1,0 +1,110 @@
+provider:
+  name: notifiers
+
+data_sources:
+  app_group:
+    read:
+      path: /apps/notifiers.eda.nokia.com
+      method: GET
+
+  cluster_notifier:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: GET
+
+  cluster_notifier_list:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+      method: GET
+
+  cluster_provider:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: GET
+
+  cluster_provider_list:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+      method: GET
+
+  notifier:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: GET
+
+  notifier_list:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+      method: GET
+
+  provider:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: GET
+
+  provider_list:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+      method: GET
+
+  resource_list:
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1
+      method: GET
+
+resources:
+  cluster_notifier:
+    create:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+      method: POST
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: GET
+    update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: PUT
+    delete:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: DELETE
+
+  cluster_provider:
+    create:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+      method: POST
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: GET
+    update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: PUT
+    delete:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: DELETE
+
+  notifier:
+    create:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+      method: POST
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: GET
+    update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: PUT
+    delete:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: DELETE
+
+  provider:
+    create:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+      method: POST
+    read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: GET
+    update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: PUT
+    delete:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: DELETE
