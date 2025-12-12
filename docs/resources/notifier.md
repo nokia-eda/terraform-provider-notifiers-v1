@@ -22,7 +22,9 @@ description: |-
 
 ### Optional
 
+- `alarms` (Attributes) (see [below for nested schema](#nestedatt--alarms))
 - `api_version` (String)
+- `deviations` (Attributes) (see [below for nested schema](#nestedatt--deviations))
 - `kind` (String)
 - `name` (String) name of the Notifier
 - `namespace` (String) the namespace scope in which to operate
@@ -68,10 +70,10 @@ Optional:
 
 Optional:
 
-- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'kind' field within alarms.
+- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'type' field within alarms.
 If a source matches both the 'sources' and 'excludes' lists, it will be excluded.
 For example, 'InterfaceMemberDown'.
-- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'kind' field within alarms.
+- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.
 Including all alarms is indicated using the '*' wildcard.
 For example, 'InterfaceDown'.
 
@@ -91,6 +93,25 @@ e.g. 'Interface {{ index . "interface.name" }} is down on node {{ index . "node.
 - `where` (String) A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.
 
 
+
+
+<a id="nestedatt--alarms"></a>
+### Nested Schema for `alarms`
+
+Optional:
+
+- `critical` (Number)
+- `major` (Number)
+- `minor` (Number)
+- `warning` (Number)
+
+
+<a id="nestedatt--deviations"></a>
+### Nested Schema for `deviations`
+
+Optional:
+
+- `count` (Number)
 
 
 <a id="nestedatt--status"></a>

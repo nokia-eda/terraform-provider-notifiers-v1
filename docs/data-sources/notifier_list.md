@@ -24,6 +24,7 @@ description: |-
 - `fields` (String) a comma-separated list of resource fields to fetch/return.  If unspecified, all fields are fetched.  If empty, only key-fields are fetched.
 - `filter` (String) an EQL "where" expression that will be used to filter the set of resources returned.
 - `label_selector` (String) a label selector string to filter the results based on CR labels
+- `labelselector` (String) Deprecated: a label selector string to filter the results based on CR labels
 
 ### Read-Only
 
@@ -40,7 +41,9 @@ Optional:
 
 Read-Only:
 
+- `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
 - `api_version` (String)
+- `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
 - `status` (Attributes) NotifierStatus defines the observed state of Notifier (see [below for nested schema](#nestedatt--items--status))
@@ -68,10 +71,10 @@ Optional:
 
 Optional:
 
-- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'kind' field within alarms.
+- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'type' field within alarms.
 If a source matches both the 'sources' and 'excludes' lists, it will be excluded.
 For example, 'InterfaceMemberDown'.
-- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'kind' field within alarms.
+- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.
 Including all alarms is indicated using the '*' wildcard.
 For example, 'InterfaceDown'.
 
@@ -91,6 +94,25 @@ e.g. 'Interface {{ index . "interface.name" }} is down on node {{ index . "node.
 - `where` (String) A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.
 
 
+
+
+<a id="nestedatt--items--alarms"></a>
+### Nested Schema for `items.alarms`
+
+Read-Only:
+
+- `critical` (Number)
+- `major` (Number)
+- `minor` (Number)
+- `warning` (Number)
+
+
+<a id="nestedatt--items--deviations"></a>
+### Nested Schema for `items.deviations`
+
+Read-Only:
+
+- `count` (Number)
 
 
 <a id="nestedatt--items--metadata"></a>

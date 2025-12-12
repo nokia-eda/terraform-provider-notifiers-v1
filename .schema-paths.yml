@@ -3,6 +3,34 @@ app_group:
       path: /apps/notifiers.eda.nokia.com
       method: GET
 
+intent_targets:
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_targets
+      method: GET
+
+k8_s_topology_request:
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_topology
+      method: POST
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_topology
+      method: POST
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_topology
+      method: POST
+  - create:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_topology
+      method: POST
+
 patch:
   - update:
       path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
@@ -171,37 +199,62 @@ com.nokia.eda.notifiers.v1.provider_deleted_resources:
       path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/_deleted
       method: GET
 
-totalPaths: 25
-totalSchemas: 48
-usedSchemas: 19
-unusedSchemas: 29
+totalPaths: 29
+totalSchemas: 75
+usedSchemas: 21
+unusedSchemas: 54
 unusedSchemaList:
   - AppGroupVersion
   - ErrorIndex
   - ErrorItem
   - ErrorResponse
+  - IntentTarget
   - K8SPatchOp
   - OverlayState
   - Resource
   - ResourceHistoryEntry
   - StatusDetails
   - TopoAttrMetadata
+  - TopoAttribute
+  - TopoBoolExpression
+  - TopoBoolLiteral
   - TopoElemMetadata
-  - TopoLinkEndpoint
+  - TopoEndpointBoolExpression
+  - TopoField
+  - TopoFixedBoolExpression
+  - TopoLabelSelector
+  - TopoLiteralStatusOrBadge
+  - TopoLiteralValue
+  - TopoLogicalExpression
   - TopoNodeGrouping
   - TopoOverlayEndpoint
   - TopoOverlayEndpointState
   - TopoOverlayLink
+  - TopoOverlayLinkGroup
+  - TopoOverlayLinkGroupEndpoint
   - TopoOverlayLinkState
   - TopoOverlayNode
+  - TopoOverlayNodeOrGroup
   - TopoOverlayNodeState
+  - TopoOverlayValue
   - TopoSchema
+  - TopoStateFilter
+  - TopoValue
+  - TopoValueExpression
   - Topology
   - com.nokia.eda.notifiers.v1.ClusterNotifier_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.ClusterNotifier_alarms
+  - com.nokia.eda.notifiers.v1.ClusterNotifier_deviations
   - com.nokia.eda.notifiers.v1.ClusterNotifier_metadata
   - com.nokia.eda.notifiers.v1.ClusterProvider_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.ClusterProvider_alarms
+  - com.nokia.eda.notifiers.v1.ClusterProvider_deviations
   - com.nokia.eda.notifiers.v1.ClusterProvider_metadata
   - com.nokia.eda.notifiers.v1.Notifier_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.Notifier_alarms
+  - com.nokia.eda.notifiers.v1.Notifier_deviations
   - com.nokia.eda.notifiers.v1.Notifier_metadata
   - com.nokia.eda.notifiers.v1.Provider_DeletedResourceEntry
+  - com.nokia.eda.notifiers.v1.Provider_alarms
+  - com.nokia.eda.notifiers.v1.Provider_deviations
   - com.nokia.eda.notifiers.v1.Provider_metadata

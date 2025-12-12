@@ -26,7 +26,9 @@ description: |-
 
 ### Read-Only
 
+- `alarms` (Attributes) (see [below for nested schema](#nestedatt--alarms))
 - `api_version` (String)
+- `deviations` (Attributes) (see [below for nested schema](#nestedatt--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--metadata))
 - `status` (Attributes) ClusterNotifierStatus defines the observed state of ClusterNotifier (see [below for nested schema](#nestedatt--status))
@@ -54,10 +56,10 @@ Optional:
 
 Optional:
 
-- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'kind' field within alarms.
+- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'type' field within alarms.
 If a source matches both the 'sources' and 'excludes' lists, it will be excluded.
 For example, 'InterfaceMemberDown'.
-- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'kind' field within alarms.
+- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.
 Including all alarms is indicated using the '*' wildcard.
 For example, 'InterfaceDown'.
 - `namespaces` (List of String) Namespaces to consider when selecting alarms for this Notifier.
@@ -81,6 +83,25 @@ e.g. 'Interface {{ index . "interface.name" }} is down on node {{ index . "node.
 
 
 
+<a id="nestedatt--alarms"></a>
+### Nested Schema for `alarms`
+
+Read-Only:
+
+- `critical` (Number)
+- `major` (Number)
+- `minor` (Number)
+- `warning` (Number)
+
+
+<a id="nestedatt--deviations"></a>
+### Nested Schema for `deviations`
+
+Read-Only:
+
+- `count` (Number)
+
+
 <a id="nestedatt--metadata"></a>
 ### Nested Schema for `metadata`
 
@@ -89,6 +110,7 @@ Read-Only:
 - `annotations` (Map of String)
 - `labels` (Map of String)
 - `name` (String)
+- `namespace` (String)
 
 
 <a id="nestedatt--status"></a>
