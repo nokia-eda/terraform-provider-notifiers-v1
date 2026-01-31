@@ -8,7 +8,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/_deleted,GET,com.nokia.eda.notifiers.v1.ClusterNotifier_DeletedResources,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name},DELETE,Status,cluster_notifier,true,false,true
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name},GET,com.nokia.eda.notifiers.v1.ClusterNotifier,cluster_notifier,true,true,true
-/apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name},PATCH,Patch,,false,false,false
+/apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name},PATCH,com.nokia.eda.notifiers.v1.ClusterNotifier,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name},PUT,com.nokia.eda.notifiers.v1.ClusterNotifier,cluster_notifier,true,false,true
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_targets,GET,IntentTargets,,false,false,false
@@ -20,7 +20,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/_deleted,GET,com.nokia.eda.notifiers.v1.ClusterProvider_DeletedResources,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name},DELETE,Status,cluster_provider,true,false,true
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name},GET,com.nokia.eda.notifiers.v1.ClusterProvider,cluster_provider,true,true,true
-/apps/notifiers.eda.nokia.com/v1/clusterproviders/{name},PATCH,Patch,,false,false,false
+/apps/notifiers.eda.nokia.com/v1/clusterproviders/{name},PATCH,com.nokia.eda.notifiers.v1.ClusterProvider,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name},PUT,com.nokia.eda.notifiers.v1.ClusterProvider,cluster_provider,true,false,true
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_targets,GET,IntentTargets,,false,false,false
@@ -32,7 +32,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/_deleted,GET,com.nokia.eda.notifiers.v1.Notifier_DeletedResources,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name},DELETE,Status,notifier,true,false,true
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name},GET,com.nokia.eda.notifiers.v1.Notifier,notifier,true,true,true
-/apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name},PATCH,Patch,,false,false,false
+/apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name},PATCH,com.nokia.eda.notifiers.v1.Notifier,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name},PUT,com.nokia.eda.notifiers.v1.Notifier,notifier,true,false,true
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_targets,GET,IntentTargets,,false,false,false
@@ -44,7 +44,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/_deleted,GET,com.nokia.eda.notifiers.v1.Provider_DeletedResources,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name},DELETE,Status,provider,true,false,true
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name},GET,com.nokia.eda.notifiers.v1.Provider,provider,true,true,true
-/apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name},PATCH,Patch,,false,false,false
+/apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name},PATCH,com.nokia.eda.notifiers.v1.Provider,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name},PUT,com.nokia.eda.notifiers.v1.Provider,provider,true,false,true
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_targets,GET,IntentTargets,,false,false,false

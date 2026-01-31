@@ -31,20 +31,6 @@ k8_s_topology_request:
       path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_topology
       method: POST
 
-patch:
-  - update:
-      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
-      method: PATCH
-  - update:
-      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
-      method: PATCH
-  - update:
-      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
-      method: PATCH
-  - update:
-      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
-      method: PATCH
-
 resource_history:
   - read:
       path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_revs
@@ -107,6 +93,9 @@ com.nokia.eda.notifiers.v1.cluster_notifier:
   - update:
       path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
       method: PUT
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+      method: PATCH
 
 com.nokia.eda.notifiers.v1.cluster_notifier_list:
   - read:
@@ -131,6 +120,9 @@ com.nokia.eda.notifiers.v1.cluster_provider:
   - update:
       path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
       method: PUT
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+      method: PATCH
 
 com.nokia.eda.notifiers.v1.cluster_provider_list:
   - read:
@@ -155,6 +147,9 @@ com.nokia.eda.notifiers.v1.notifier:
   - update:
       path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
       method: PUT
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+      method: PATCH
 
 com.nokia.eda.notifiers.v1.notifier_list:
   - read:
@@ -182,6 +177,9 @@ com.nokia.eda.notifiers.v1.provider:
   - update:
       path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
       method: PUT
+  - update:
+      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+      method: PATCH
 
 com.nokia.eda.notifiers.v1.provider_list:
   - read:
@@ -201,8 +199,8 @@ com.nokia.eda.notifiers.v1.provider_deleted_resources:
 
 totalPaths: 29
 totalSchemas: 75
-usedSchemas: 21
-unusedSchemas: 54
+usedSchemas: 20
+unusedSchemas: 55
 unusedSchemaList:
   - AppGroupVersion
   - ErrorIndex
@@ -211,6 +209,7 @@ unusedSchemaList:
   - IntentTarget
   - K8SPatchOp
   - OverlayState
+  - Patch
   - Resource
   - ResourceHistoryEntry
   - StatusDetails
