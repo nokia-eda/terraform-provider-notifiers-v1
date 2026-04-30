@@ -12,7 +12,6 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name},PUT,com.nokia.eda.notifiers.v1.ClusterNotifier,cluster_notifier,true,false,true
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_targets,GET,IntentTargets,,false,false,false
-/apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_topology,GET,ResourceTopology,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_topology,POST,K8STopologyRequest,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders,DELETE,com.nokia.eda.notifiers.v1.ClusterProviderList,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders,GET,com.nokia.eda.notifiers.v1.ClusterProviderList,cluster_provider_list,true,true,false
@@ -24,7 +23,6 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name},PUT,com.nokia.eda.notifiers.v1.ClusterProvider,cluster_provider,true,false,true
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_targets,GET,IntentTargets,,false,false,false
-/apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_topology,GET,ResourceTopology,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_topology,POST,K8STopologyRequest,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers,DELETE,com.nokia.eda.notifiers.v1.NotifierList,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers,GET,com.nokia.eda.notifiers.v1.NotifierList,notifier_list,true,true,false
@@ -36,7 +34,6 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name},PUT,com.nokia.eda.notifiers.v1.Notifier,notifier,true,false,true
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_targets,GET,IntentTargets,,false,false,false
-/apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_topology,GET,ResourceTopology,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_topology,POST,K8STopologyRequest,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers,DELETE,com.nokia.eda.notifiers.v1.ProviderList,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers,GET,com.nokia.eda.notifiers.v1.ProviderList,provider_list,true,true,false
@@ -48,7 +45,6 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name},PUT,com.nokia.eda.notifiers.v1.Provider,provider,true,false,true
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_targets,GET,IntentTargets,,false,false,false
-/apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_topology,GET,ResourceTopology,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_topology,POST,K8STopologyRequest,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/notifiers,GET,com.nokia.eda.notifiers.v1.NotifierList,,false,false,false
 /apps/notifiers.eda.nokia.com/v1/providers,GET,com.nokia.eda.notifiers.v1.ProviderList,,false,false,false
