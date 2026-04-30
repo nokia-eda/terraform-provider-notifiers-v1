@@ -50,20 +50,6 @@ resource_list:
       path: /apps/notifiers.eda.nokia.com/v1
       method: GET
 
-resource_topology:
-  - read:
-      path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_topology
-      method: GET
-  - read:
-      path: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}/_topology
-      method: GET
-  - read:
-      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}/_topology
-      method: GET
-  - read:
-      path: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}/_topology
-      method: GET
-
 status:
   - delete:
       path: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
@@ -198,13 +184,11 @@ com.nokia.eda.notifiers.v1.provider_deleted_resources:
       method: GET
 
 totalPaths: 29
-totalSchemas: 75
-usedSchemas: 20
-unusedSchemas: 55
+totalSchemas: 73
+usedSchemas: 19
+unusedSchemas: 54
 unusedSchemaList:
   - AppGroupVersion
-  - ErrorIndex
-  - ErrorItem
   - ErrorResponse
   - IntentTarget
   - K8SPatchOp
@@ -212,6 +196,7 @@ unusedSchemaList:
   - Patch
   - Resource
   - ResourceHistoryEntry
+  - ResourceTopology
   - StatusDetails
   - TopoAttrMetadata
   - TopoAttribute
