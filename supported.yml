@@ -1,0 +1,63 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/notifiers.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1
+    oas_schema: ResourceList
+  - model_name: cluster_notifier_list
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+    oas_schema: com.nokia.eda.notifiers.v1.ClusterNotifierList
+  - model_name: cluster_notifier
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}
+    oas_schema: com.nokia.eda.notifiers.v1.ClusterNotifier
+  - model_name: cluster_provider_list
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+    oas_schema: com.nokia.eda.notifiers.v1.ClusterProviderList
+  - model_name: cluster_provider
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/clusterproviders/{name}
+    oas_schema: com.nokia.eda.notifiers.v1.ClusterProvider
+  - model_name: notifier_list
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+    oas_schema: com.nokia.eda.notifiers.v1.NotifierList
+  - model_name: notifier
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/{name}
+    oas_schema: com.nokia.eda.notifiers.v1.Notifier
+  - model_name: provider_list
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+    oas_schema: com.nokia.eda.notifiers.v1.ProviderList
+  - model_name: provider
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/{name}
+    oas_schema: com.nokia.eda.notifiers.v1.Provider
+
+resources:
+  - model_name: cluster_notifier
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/clusternotifiers
+    oas_schema: com.nokia.eda.notifiers.v1.ClusterNotifier
+  - model_name: cluster_provider
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/clusterproviders
+    oas_schema: com.nokia.eda.notifiers.v1.ClusterProvider
+  - model_name: notifier
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers
+    oas_schema: com.nokia.eda.notifiers.v1.Notifier
+  - model_name: provider
+    oas_endpoint: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers
+    oas_schema: com.nokia.eda.notifiers.v1.Provider
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/notifiers.eda.nokia.com/v1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.notifiers.v1.ClusterNotifier_DeletedResources
+      get: /apps/notifiers.eda.nokia.com/v1/clusternotifiers/_deleted
+    - oas_schema: com.nokia.eda.notifiers.v1.ClusterProvider_DeletedResources
+      get: /apps/notifiers.eda.nokia.com/v1/clusterproviders/_deleted
+    - oas_schema: com.nokia.eda.notifiers.v1.Notifier_DeletedResources
+      get: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/notifiers/_deleted
+    - oas_schema: com.nokia.eda.notifiers.v1.Provider_DeletedResources
+      get: /apps/notifiers.eda.nokia.com/v1/namespaces/{namespace}/providers/_deleted
+  resources:
