@@ -184,26 +184,26 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "A simple user provided description of this Notifier"
                                     }
                                 },
                                 {
                                     "name": "enabled",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Enable or disable this Notifier"
                                     }
                                 },
                                 {
                                     "name": "providers",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -213,17 +213,17 @@
                                 {
                                     "name": "sources",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "alarms_1",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "exclude",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -233,7 +233,7 @@
                                                         {
                                                             "name": "include",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -243,7 +243,7 @@
                                                         {
                                                             "name": "namespaces",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -257,19 +257,19 @@
                                             {
                                                 "name": "query",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "color",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc."
                                                             }
                                                         },
                                                         {
                                                             "name": "fields",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -279,28 +279,28 @@
                                                         {
                                                             "name": "table",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The table to use for the query, e.g. '.node.srl.interface'"
                                                             }
                                                         },
                                                         {
                                                             "name": "template",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'."
                                                             }
                                                         },
                                                         {
                                                             "name": "title",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The title to use when presenting results for this query, e.g. 'InterfaceDown'"
                                                             }
                                                         },
                                                         {
                                                             "name": "where",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                             }
                                                         }
@@ -469,26 +469,26 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "description",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A simple user provided description of this Notifier"
                                                     }
                                                 },
                                                 {
                                                     "name": "enabled",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Enable or disable this Notifier"
                                                     }
                                                 },
                                                 {
                                                     "name": "providers",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -498,17 +498,17 @@
                                                 {
                                                     "name": "sources",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "alarms_1",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "exclude",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -518,7 +518,7 @@
                                                                         {
                                                                             "name": "include",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -528,7 +528,7 @@
                                                                         {
                                                                             "name": "namespaces",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -542,19 +542,19 @@
                                                             {
                                                                 "name": "query",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "color",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "fields",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -564,28 +564,28 @@
                                                                         {
                                                                             "name": "table",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The table to use for the query, e.g. '.node.srl.interface'"
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "template",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "title",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The title to use when presenting results for this query, e.g. 'InterfaceDown'"
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "where",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                                             }
                                                                         }
@@ -738,26 +738,26 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "A simple user provided description of this Provider"
                                     }
                                 },
                                 {
                                     "name": "enabled",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Enable or disable this Provider"
                                     }
                                 },
                                 {
                                     "name": "uri",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "A URI to send notifications to. For example 'slack://token-a/token-b/token-c',\nor 'discord://discord.com/api/webhooks/channel/token'."
                                     }
                                 }
@@ -918,26 +918,26 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "description",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A simple user provided description of this Provider"
                                                     }
                                                 },
                                                 {
                                                     "name": "enabled",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Enable or disable this Provider"
                                                     }
                                                 },
                                                 {
                                                     "name": "uri",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A URI to send notifications to. For example 'slack://token-a/token-b/token-c',\nor 'discord://discord.com/api/webhooks/channel/token'."
                                                     }
                                                 }
@@ -1089,26 +1089,26 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "A simple user provided description of this Notifier"
                                     }
                                 },
                                 {
                                     "name": "enabled",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Enable or disable this Notifier"
                                     }
                                 },
                                 {
                                     "name": "providers",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -1118,17 +1118,17 @@
                                 {
                                     "name": "sources",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "alarms_1",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "exclude",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -1138,7 +1138,7 @@
                                                         {
                                                             "name": "include",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -1152,19 +1152,19 @@
                                             {
                                                 "name": "query",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "color",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc."
                                                             }
                                                         },
                                                         {
                                                             "name": "fields",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -1174,28 +1174,28 @@
                                                         {
                                                             "name": "table",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The table to use for the query, e.g. '.node.srl.interface'"
                                                             }
                                                         },
                                                         {
                                                             "name": "template",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'."
                                                             }
                                                         },
                                                         {
                                                             "name": "title",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The title to use when presenting results for this query, e.g. 'InterfaceDown'"
                                                             }
                                                         },
                                                         {
                                                             "name": "where",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                             }
                                                         }
@@ -1371,26 +1371,26 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "description",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A simple user provided description of this Notifier"
                                                     }
                                                 },
                                                 {
                                                     "name": "enabled",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Enable or disable this Notifier"
                                                     }
                                                 },
                                                 {
                                                     "name": "providers",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -1400,17 +1400,17 @@
                                                 {
                                                     "name": "sources",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "alarms_1",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "exclude",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -1420,7 +1420,7 @@
                                                                         {
                                                                             "name": "include",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -1434,19 +1434,19 @@
                                                             {
                                                                 "name": "query",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "color",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "fields",
                                                                             "list": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "element_type": {
                                                                                     "string": {}
                                                                                 },
@@ -1456,28 +1456,28 @@
                                                                         {
                                                                             "name": "table",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The table to use for the query, e.g. '.node.srl.interface'"
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "template",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "title",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The title to use when presenting results for this query, e.g. 'InterfaceDown'"
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "where",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                                             }
                                                                         }
@@ -1637,26 +1637,26 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "A simple user provided description of this Provider"
                                     }
                                 },
                                 {
                                     "name": "enabled",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Enable or disable this Provider"
                                     }
                                 },
                                 {
                                     "name": "uri",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "A URI to send notifications to. For example 'slack://token-a/token-b/token-c',\nor 'discord://discord.com/api/webhooks/channel/token'."
                                     }
                                 }
@@ -1824,26 +1824,26 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "description",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A simple user provided description of this Provider"
                                                     }
                                                 },
                                                 {
                                                     "name": "enabled",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Enable or disable this Provider"
                                                     }
                                                 },
                                                 {
                                                     "name": "uri",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A URI to send notifications to. For example 'slack://token-a/token-b/token-c',\nor 'discord://discord.com/api/webhooks/channel/token'."
                                                     }
                                                 }
@@ -2119,7 +2119,7 @@
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "A simple user provided description of this Notifier"
                                     }
                                 },
@@ -2151,12 +2151,12 @@
                                             {
                                                 "name": "alarms_1",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "exclude",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2166,7 +2166,7 @@
                                                         {
                                                             "name": "include",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2176,7 +2176,7 @@
                                                         {
                                                             "name": "namespaces",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2190,19 +2190,19 @@
                                             {
                                                 "name": "query",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "color",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc."
                                                             }
                                                         },
                                                         {
                                                             "name": "fields",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2212,28 +2212,28 @@
                                                         {
                                                             "name": "table",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The table to use for the query, e.g. '.node.srl.interface'"
                                                             }
                                                         },
                                                         {
                                                             "name": "template",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'."
                                                             }
                                                         },
                                                         {
                                                             "name": "title",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The title to use when presenting results for this query, e.g. 'InterfaceDown'"
                                                             }
                                                         },
                                                         {
                                                             "name": "where",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                             }
                                                         }
@@ -2438,7 +2438,7 @@
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "A simple user provided description of this Provider"
                                     }
                                 },
@@ -2649,7 +2649,7 @@
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "A simple user provided description of this Notifier"
                                     }
                                 },
@@ -2681,12 +2681,12 @@
                                             {
                                                 "name": "alarms_1",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "exclude",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2696,7 +2696,7 @@
                                                         {
                                                             "name": "include",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2710,19 +2710,19 @@
                                             {
                                                 "name": "query",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "color",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc."
                                                             }
                                                         },
                                                         {
                                                             "name": "fields",
                                                             "list": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "element_type": {
                                                                     "string": {}
                                                                 },
@@ -2732,28 +2732,28 @@
                                                         {
                                                             "name": "table",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The table to use for the query, e.g. '.node.srl.interface'"
                                                             }
                                                         },
                                                         {
                                                             "name": "template",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'."
                                                             }
                                                         },
                                                         {
                                                             "name": "title",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The title to use when presenting results for this query, e.g. 'InterfaceDown'"
                                                             }
                                                         },
                                                         {
                                                             "name": "where",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                             }
                                                         }
@@ -2962,7 +2962,7 @@
                                 {
                                     "name": "description",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "A simple user provided description of this Provider"
                                     }
                                 },

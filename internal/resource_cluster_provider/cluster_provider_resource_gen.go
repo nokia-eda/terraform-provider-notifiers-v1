@@ -123,6 +123,7 @@ func ClusterProviderResourceSchema(ctx context.Context) schema.Schema {
 				Attributes: map[string]schema.Attribute{
 					"description": schema.StringAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "A simple user provided description of this Provider",
 						MarkdownDescription: "A simple user provided description of this Provider",
 					},

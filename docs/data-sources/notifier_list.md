@@ -35,10 +35,6 @@ description: |-
 <a id="nestedatt--items"></a>
 ### Nested Schema for `items`
 
-Optional:
-
-- `spec` (Attributes) NotifierSpec defines the desired state of Notifier (see [below for nested schema](#nestedatt--items--spec))
-
 Read-Only:
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
@@ -46,55 +42,8 @@ Read-Only:
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
+- `spec` (Attributes) NotifierSpec defines the desired state of Notifier (see [below for nested schema](#nestedatt--items--spec))
 - `status` (Attributes) NotifierStatus defines the observed state of Notifier (see [below for nested schema](#nestedatt--items--status))
-
-<a id="nestedatt--items--spec"></a>
-### Nested Schema for `items.spec`
-
-Optional:
-
-- `description` (String) A simple user provided description of this Notifier
-- `enabled` (Boolean) Enable or disable this Notifier
-- `providers` (List of String) A list of references to Providers to send to for notifications matching any source in this Notifier
-- `sources` (Attributes) Set the notifier sources (see [below for nested schema](#nestedatt--items--spec--sources))
-
-<a id="nestedatt--items--spec--sources"></a>
-### Nested Schema for `items.spec.sources`
-
-Optional:
-
-- `alarms` (Attributes) Include alarm sources in this notifier (see [below for nested schema](#nestedatt--items--spec--sources--alarms))
-- `query` (Attributes) Include a query source in this notifier (see [below for nested schema](#nestedatt--items--spec--sources--query))
-
-<a id="nestedatt--items--spec--sources--alarms"></a>
-### Nested Schema for `items.spec.sources.alarms`
-
-Optional:
-
-- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'type' field within alarms.
-If a source matches both the 'sources' and 'excludes' lists, it will be excluded.
-For example, 'InterfaceMemberDown'.
-- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.
-Including all alarms is indicated using the '*' wildcard.
-For example, 'InterfaceDown'.
-
-
-<a id="nestedatt--items--spec--sources--query"></a>
-### Nested Schema for `items.spec.sources.query`
-
-Optional:
-
-- `color` (String) Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc.
-- `fields` (List of String) Fields to include in the query results, which can then be used in the template,
-e.g. '.node.name' or '.node.srl.interface.name"'.
-- `table` (String) The table to use for the query, e.g. '.node.srl.interface'
-- `template` (String) A template to use when sending notifications for this query. The template can use the fields from the query results.
-e.g. 'Interface {{ index . "interface.name" }} is down on node {{ index . "node.name" }}'.
-- `title` (String) The title to use when presenting results for this query, e.g. 'InterfaceDown'
-- `where` (String) A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.
-
-
-
 
 <a id="nestedatt--items--alarms"></a>
 ### Nested Schema for `items.alarms`
@@ -124,6 +73,54 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--items--spec"></a>
+### Nested Schema for `items.spec`
+
+Read-Only:
+
+- `description` (String) A simple user provided description of this Notifier
+- `enabled` (Boolean) Enable or disable this Notifier
+- `providers` (List of String) A list of references to Providers to send to for notifications matching any source in this Notifier
+- `sources` (Attributes) Set the notifier sources (see [below for nested schema](#nestedatt--items--spec--sources))
+
+<a id="nestedatt--items--spec--sources"></a>
+### Nested Schema for `items.spec.sources`
+
+Read-Only:
+
+- `alarms` (Attributes) Include alarm sources in this notifier (see [below for nested schema](#nestedatt--items--spec--sources--alarms))
+- `query` (Attributes) Include a query source in this notifier (see [below for nested schema](#nestedatt--items--spec--sources--query))
+
+<a id="nestedatt--items--spec--sources--alarms"></a>
+### Nested Schema for `items.spec.sources.alarms`
+
+Read-Only:
+
+- `exclude` (List of String) A list of alarm excludes for this Notifier, matching the 'type' field within alarms.
+If a source matches both the 'sources' and 'excludes' lists, it will be excluded.
+For example, 'InterfaceMemberDown'.
+- `include` (List of String) A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.
+Including all alarms is indicated using the '*' wildcard.
+For example, 'InterfaceDown'.
+
+
+<a id="nestedatt--items--spec--sources--query"></a>
+### Nested Schema for `items.spec.sources.query`
+
+Read-Only:
+
+- `color` (String) Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc.
+- `fields` (List of String) Fields to include in the query results, which can then be used in the template,
+e.g. '.node.name' or '.node.srl.interface.name"'.
+- `table` (String) The table to use for the query, e.g. '.node.srl.interface'
+- `template` (String) A template to use when sending notifications for this query. The template can use the fields from the query results.
+e.g. 'Interface {{ index . "interface.name" }} is down on node {{ index . "node.name" }}'.
+- `title` (String) The title to use when presenting results for this query, e.g. 'InterfaceDown'
+- `where` (String) A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.
+
+
 
 
 <a id="nestedatt--items--status"></a>

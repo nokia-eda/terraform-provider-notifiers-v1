@@ -123,6 +123,7 @@ func ClusterNotifierResourceSchema(ctx context.Context) schema.Schema {
 				Attributes: map[string]schema.Attribute{
 					"description": schema.StringAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "A simple user provided description of this Notifier",
 						MarkdownDescription: "A simple user provided description of this Notifier",
 					},
@@ -146,18 +147,21 @@ func ClusterNotifierResourceSchema(ctx context.Context) schema.Schema {
 									"exclude": schema.ListAttribute{
 										ElementType:         types.StringType,
 										Optional:            true,
+										Computed:            true,
 										Description:         "A list of alarm excludes for this Notifier, matching the 'type' field within alarms.\nIf a source matches both the 'sources' and 'excludes' lists, it will be excluded.\nFor example, 'InterfaceMemberDown'.",
 										MarkdownDescription: "A list of alarm excludes for this Notifier, matching the 'type' field within alarms.\nIf a source matches both the 'sources' and 'excludes' lists, it will be excluded.\nFor example, 'InterfaceMemberDown'.",
 									},
 									"include": schema.ListAttribute{
 										ElementType:         types.StringType,
 										Optional:            true,
+										Computed:            true,
 										Description:         "A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.\nIncluding all alarms is indicated using the '*' wildcard.\nFor example, 'InterfaceDown'.",
 										MarkdownDescription: "A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.\nIncluding all alarms is indicated using the '*' wildcard.\nFor example, 'InterfaceDown'.",
 									},
 									"namespaces": schema.ListAttribute{
 										ElementType:         types.StringType,
 										Optional:            true,
+										Computed:            true,
 										Description:         "Namespaces to consider when selecting alarms for this Notifier.\nAlarms from these namespaces will be either included or excluded based on the other filters.",
 										MarkdownDescription: "Namespaces to consider when selecting alarms for this Notifier.\nAlarms from these namespaces will be either included or excluded based on the other filters.",
 									},
@@ -168,6 +172,7 @@ func ClusterNotifierResourceSchema(ctx context.Context) schema.Schema {
 									},
 								},
 								Optional:            true,
+								Computed:            true,
 								Description:         "Include alarm sources in this notifier",
 								MarkdownDescription: "Include alarm sources in this notifier",
 							},
@@ -175,32 +180,38 @@ func ClusterNotifierResourceSchema(ctx context.Context) schema.Schema {
 								Attributes: map[string]schema.Attribute{
 									"color": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc.",
 										MarkdownDescription: "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc.",
 									},
 									"fields": schema.ListAttribute{
 										ElementType:         types.StringType,
 										Optional:            true,
+										Computed:            true,
 										Description:         "Fields to include in the query results, which can then be used in the template,\ne.g. '.node.name' or '.node.srl.interface.name\"'.",
 										MarkdownDescription: "Fields to include in the query results, which can then be used in the template,\ne.g. '.node.name' or '.node.srl.interface.name\"'.",
 									},
 									"table": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "The table to use for the query, e.g. '.node.srl.interface'",
 										MarkdownDescription: "The table to use for the query, e.g. '.node.srl.interface'",
 									},
 									"template": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'.",
 										MarkdownDescription: "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'.",
 									},
 									"title": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "The title to use when presenting results for this query, e.g. 'InterfaceDown'",
 										MarkdownDescription: "The title to use when presenting results for this query, e.g. 'InterfaceDown'",
 									},
 									"where": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 										MarkdownDescription: "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 									},
@@ -211,6 +222,7 @@ func ClusterNotifierResourceSchema(ctx context.Context) schema.Schema {
 									},
 								},
 								Optional:            true,
+								Computed:            true,
 								Description:         "Include a query source in this notifier",
 								MarkdownDescription: "Include a query source in this notifier",
 							},

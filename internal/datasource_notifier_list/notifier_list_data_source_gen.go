@@ -104,18 +104,18 @@ func NotifierListDataSourceSchema(ctx context.Context) schema.Schema {
 						"spec": schema.SingleNestedAttribute{
 							Attributes: map[string]schema.Attribute{
 								"description": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "A simple user provided description of this Notifier",
 									MarkdownDescription: "A simple user provided description of this Notifier",
 								},
 								"enabled": schema.BoolAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Enable or disable this Notifier",
 									MarkdownDescription: "Enable or disable this Notifier",
 								},
 								"providers": schema.ListAttribute{
 									ElementType:         types.StringType,
-									Optional:            true,
+									Computed:            true,
 									Description:         "A list of references to Providers to send to for notifications matching any source in this Notifier",
 									MarkdownDescription: "A list of references to Providers to send to for notifications matching any source in this Notifier",
 								},
@@ -125,13 +125,13 @@ func NotifierListDataSourceSchema(ctx context.Context) schema.Schema {
 											Attributes: map[string]schema.Attribute{
 												"exclude": schema.ListAttribute{
 													ElementType:         types.StringType,
-													Optional:            true,
+													Computed:            true,
 													Description:         "A list of alarm excludes for this Notifier, matching the 'type' field within alarms.\nIf a source matches both the 'sources' and 'excludes' lists, it will be excluded.\nFor example, 'InterfaceMemberDown'.",
 													MarkdownDescription: "A list of alarm excludes for this Notifier, matching the 'type' field within alarms.\nIf a source matches both the 'sources' and 'excludes' lists, it will be excluded.\nFor example, 'InterfaceMemberDown'.",
 												},
 												"include": schema.ListAttribute{
 													ElementType:         types.StringType,
-													Optional:            true,
+													Computed:            true,
 													Description:         "A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.\nIncluding all alarms is indicated using the '*' wildcard.\nFor example, 'InterfaceDown'.",
 													MarkdownDescription: "A list of alarms that this Notifier will listen to, matching the 'type' field within alarms.\nIncluding all alarms is indicated using the '*' wildcard.\nFor example, 'InterfaceDown'.",
 												},
@@ -141,40 +141,40 @@ func NotifierListDataSourceSchema(ctx context.Context) schema.Schema {
 													AttrTypes: Alarms1Value{}.AttributeTypes(ctx),
 												},
 											},
-											Optional:            true,
+											Computed:            true,
 											Description:         "Include alarm sources in this notifier",
 											MarkdownDescription: "Include alarm sources in this notifier",
 										},
 										"query": schema.SingleNestedAttribute{
 											Attributes: map[string]schema.Attribute{
 												"color": schema.StringAttribute{
-													Optional:            true,
+													Computed:            true,
 													Description:         "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc.",
 													MarkdownDescription: "Sets the color of notifications generated from this query. Valid values are web color names, e.g. 'red', 'green', 'blue', 'yellow', 'purple', 'gray', etc.",
 												},
 												"fields": schema.ListAttribute{
 													ElementType:         types.StringType,
-													Optional:            true,
+													Computed:            true,
 													Description:         "Fields to include in the query results, which can then be used in the template,\ne.g. '.node.name' or '.node.srl.interface.name\"'.",
 													MarkdownDescription: "Fields to include in the query results, which can then be used in the template,\ne.g. '.node.name' or '.node.srl.interface.name\"'.",
 												},
 												"table": schema.StringAttribute{
-													Optional:            true,
+													Computed:            true,
 													Description:         "The table to use for the query, e.g. '.node.srl.interface'",
 													MarkdownDescription: "The table to use for the query, e.g. '.node.srl.interface'",
 												},
 												"template": schema.StringAttribute{
-													Optional:            true,
+													Computed:            true,
 													Description:         "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'.",
 													MarkdownDescription: "A template to use when sending notifications for this query. The template can use the fields from the query results.\ne.g. 'Interface {{ index . \"interface.name\" }} is down on node {{ index . \"node.name\" }}'.",
 												},
 												"title": schema.StringAttribute{
-													Optional:            true,
+													Computed:            true,
 													Description:         "The title to use when presenting results for this query, e.g. 'InterfaceDown'",
 													MarkdownDescription: "The title to use when presenting results for this query, e.g. 'InterfaceDown'",
 												},
 												"where": schema.StringAttribute{
-													Optional:            true,
+													Computed:            true,
 													Description:         "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 													MarkdownDescription: "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 												},
@@ -184,7 +184,7 @@ func NotifierListDataSourceSchema(ctx context.Context) schema.Schema {
 													AttrTypes: QueryValue{}.AttributeTypes(ctx),
 												},
 											},
-											Optional:            true,
+											Computed:            true,
 											Description:         "Include a query source in this notifier",
 											MarkdownDescription: "Include a query source in this notifier",
 										},
@@ -194,7 +194,7 @@ func NotifierListDataSourceSchema(ctx context.Context) schema.Schema {
 											AttrTypes: SourcesValue{}.AttributeTypes(ctx),
 										},
 									},
-									Optional:            true,
+									Computed:            true,
 									Description:         "Set the notifier sources",
 									MarkdownDescription: "Set the notifier sources",
 								},
@@ -204,7 +204,7 @@ func NotifierListDataSourceSchema(ctx context.Context) schema.Schema {
 									AttrTypes: SpecValue{}.AttributeTypes(ctx),
 								},
 							},
-							Optional:            true,
+							Computed:            true,
 							Description:         "NotifierSpec defines the desired state of Notifier",
 							MarkdownDescription: "NotifierSpec defines the desired state of Notifier",
 						},

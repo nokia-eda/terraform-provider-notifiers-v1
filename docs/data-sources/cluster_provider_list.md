@@ -31,10 +31,6 @@ description: |-
 <a id="nestedatt--items"></a>
 ### Nested Schema for `items`
 
-Optional:
-
-- `spec` (Attributes) ClusterProviderSpec defines the desired state of ClusterProvider (see [below for nested schema](#nestedatt--items--spec))
-
 Read-Only:
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
@@ -42,18 +38,8 @@ Read-Only:
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
+- `spec` (Attributes) ClusterProviderSpec defines the desired state of ClusterProvider (see [below for nested schema](#nestedatt--items--spec))
 - `status` (Attributes) ClusterProviderStatus defines the observed state of ClusterProvider (see [below for nested schema](#nestedatt--items--status))
-
-<a id="nestedatt--items--spec"></a>
-### Nested Schema for `items.spec`
-
-Optional:
-
-- `description` (String) A simple user provided description of this Provider
-- `enabled` (Boolean) Enable or disable this Provider
-- `uri` (String) A URI to send notifications to. For example 'slack://token-a/token-b/token-c',
-or 'discord://discord.com/api/webhooks/channel/token'.
-
 
 <a id="nestedatt--items--alarms"></a>
 ### Nested Schema for `items.alarms`
@@ -83,6 +69,17 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--items--spec"></a>
+### Nested Schema for `items.spec`
+
+Read-Only:
+
+- `description` (String) A simple user provided description of this Provider
+- `enabled` (Boolean) Enable or disable this Provider
+- `uri` (String) A URI to send notifications to. For example 'slack://token-a/token-b/token-c',
+or 'discord://discord.com/api/webhooks/channel/token'.
 
 
 <a id="nestedatt--items--status"></a>

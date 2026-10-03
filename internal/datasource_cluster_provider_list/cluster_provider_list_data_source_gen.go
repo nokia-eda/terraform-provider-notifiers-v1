@@ -104,17 +104,17 @@ func ClusterProviderListDataSourceSchema(ctx context.Context) schema.Schema {
 						"spec": schema.SingleNestedAttribute{
 							Attributes: map[string]schema.Attribute{
 								"description": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "A simple user provided description of this Provider",
 									MarkdownDescription: "A simple user provided description of this Provider",
 								},
 								"enabled": schema.BoolAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Enable or disable this Provider",
 									MarkdownDescription: "Enable or disable this Provider",
 								},
 								"uri": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "A URI to send notifications to. For example 'slack://token-a/token-b/token-c',\nor 'discord://discord.com/api/webhooks/channel/token'.",
 									MarkdownDescription: "A URI to send notifications to. For example 'slack://token-a/token-b/token-c',\nor 'discord://discord.com/api/webhooks/channel/token'.",
 								},
@@ -124,7 +124,7 @@ func ClusterProviderListDataSourceSchema(ctx context.Context) schema.Schema {
 									AttrTypes: SpecValue{}.AttributeTypes(ctx),
 								},
 							},
-							Optional:            true,
+							Computed:            true,
 							Description:         "ClusterProviderSpec defines the desired state of ClusterProvider",
 							MarkdownDescription: "ClusterProviderSpec defines the desired state of ClusterProvider",
 						},
